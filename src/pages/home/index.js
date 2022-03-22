@@ -2,7 +2,6 @@ import React from 'react'
 import { Container, MovieList, Movie, Header } from './styles.js'
 import { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
-import { APIKey } from '../../config/key'
 
 
 function Home(){
@@ -11,7 +10,7 @@ function Home(){
     const image_path = "https://image.tmdb.org/t/p/w500"
 
     useEffect( () => {
-        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${APIKey}&language=en-US&page=1`)
+        fetch('https://api.themoviedb.org/3/movie/popular?api_key=9d4646473f9d9d575bfbe472389c87a4&language=en-US&page=1')
             .then( response => response.json())
             .then( data => setMovies(data.results))
     }, [])

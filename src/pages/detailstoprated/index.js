@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { DataContainer, DetailsContainer, NavLink } from './style'
 import { useParams } from 'react-router-dom'
-import { APIKey } from '../../config/key'
 
 function TopRatedDetailsHome(){
 
@@ -10,7 +9,7 @@ function TopRatedDetailsHome(){
     const { id } = useParams()
 
     useEffect( () => {
-        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${APIKey}&language=en-US`)
+        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=9d4646473f9d9d575bfbe472389c87a4&language=en-US`)
         .then( response => response.json())
         .then( data => setDetails(data))
     })
